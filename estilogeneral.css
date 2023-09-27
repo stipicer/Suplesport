@@ -1,0 +1,255 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    /*cambia el tipo de letra*/
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*--------------------------------------------------------
+        Estilos para encabezado
+ -----------------------------------------------------------*/
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    grid-area: encabezado;
+}
+
+.encabezado img {
+    width: 50px;
+    margin: 0px 15px;
+}
+
+.encabezado H1 {
+    letter-spacing: 5px;
+    font-size: 3.5vw;
+}
+
+.encabezado .iconos>a {
+    color: whitesmoke;
+    font-size: 10px;
+}
+
+/*--------------------------------------------------------
+        Estilos para barra de Menu
+ -----------------------------------------------------------*/
+
+.menu {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    background-color: rgb(244, 230, 230);
+    height: 50px;
+    grid-area: barramenu;
+
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0px;
+
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    color: black;
+    padding: 20px 25px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    display: block;
+
+
+}
+
+nav ul li a:hover {
+    background-color: #ff5959;
+    color: white;
+    animation-name: boton-menu;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes boton-menu {
+    0% {
+        transform: scaleX(1.0);
+    }
+
+    50% {
+        transform: scaleX(1.15);
+    }
+
+    100% {
+        transform: scaleX(1.0);
+    }
+}
+
+/*--------------------------------------------------------
+        Estilos para imagen principal
+ -----------------------------------------------------------*/
+.contenedor-imagen {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    grid-area: imagencentral;
+
+}
+
+.contenedor-imagen img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/*--------------------------------------------------------
+         Estilos para mostrar subtitulos
+-----------------------------------------------------------*/
+.contenedor-subtitulo {
+    width: 100%;
+    margin-bottom: 1%;
+    background-color: whitesmoke;
+    padding: 6px 6px;
+    letter-spacing: 3px;
+    text-align: center;
+    grid-area: subtitulo;
+
+
+}
+
+/*--------------------------------------------------------
+         Estilos para mostrar Imagenes deportes
+-----------------------------------------------------------*/
+.contenedor-deportes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-area: imagenes-deporte;
+}
+
+.contenedor-deportes .imagen-deporte{
+    width:300px;
+    position: relative;
+ }
+
+.contenedor-deportes .imagen-deporte img{
+    width: 100%;
+    height: 400px;
+}
+
+/*--------------------------------------------------------
+        Estilos para Pie de Pagina
+ -----------------------------------------------------------*/
+.pie {
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0px 25px;
+    background-color: rgb(247, 245, 245);
+    font-size: 7px;
+    grid-area: footer;
+
+}
+
+.iconos {
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
+
+.pie .iconos>a {
+    color: black;
+    font-size: 15px;
+
+}
+
+.pie .iconos >h2 {
+    color: black;
+    font-size: 15px;
+}
+.pie .logo-footer img {
+    width: 50px;
+ 
+}
+
+/*--------------------------------------------------------
+        Estilos para contenedor GRID pantalla pequeñas
+ -----------------------------------------------------------*/
+.contenedor {
+    display: grid;
+    grid-template: repeat(6, auto)/100%;
+    grid-template-areas: "encabezado"
+        "barramenu"
+        "imagencentral"
+        "producto"
+        "footer";
+}
+
+
+
+/*--------------------------------------------------------
+        Estilos grid para pantallas small
+ -----------------------------------------------------------*/
+
+@media (min-width:720px) {
+    .contenedor {
+        display: grid;
+        grid-template: repeat(5, auto)/ 50% 50%;
+        grid-template-areas: "encabezado encabezado"
+            "barramenu barramenu"
+            "imagencentral imagencentral"
+            "subtitulo subtitulo"
+            "producto producto"
+            "footer footer";
+    }
+
+     .encabezado H1 {
+        letter-spacing: 5px;
+        font-size: 2vw;
+    }
+
+    .encabezado .iconos>a {
+        font-size: 20px;
+    }
+
+    .encabezado img {
+        width: 70px;
+        margin: 0px 15px;
+    }
+
+    .contenedor-subtitulo {
+        font-size: 1.1vw;
+    
+    }
+    .pie {
+        font-size: 15px;
+     
+    
+    }
+    .pie .logo-footer img {
+        width: 200px;
+     
+    }
+    .pie .iconos>a {
+        font-size: 25px;
+    
+    }
+    .pie .iconos >h2 {
+        font-size: 25px;
+    }
+   
+}
