@@ -1,0 +1,214 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    /*cambia el tipo de letra*/
+}
+/*  GRID PRINCIPAL pantalla grand*/
+
+.ppal {
+    display: grid;
+    grid-template: auto auto auto auto auto /  30% 10%  auto;
+    grid-template-areas: "encabe encabe encabe "
+                        "menu-bar menu-bar menu-bar "
+                        "subt subt subt"
+                        "izquierda formu formu "
+                        "pie pie pie"                   
+
+}
+
+/*para pantallas medianaas*/
+@media (max-whith:1000px){
+.container {
+    display: grid;
+    grid-template: auto auto auto auto auto auto /  auto   auto;
+    grid-template-areas: "encabe encabe  "
+                        "menu-bar menu-bar "
+                        "subt subt "
+                        "izquierda izquierda"
+                         "formu formu"
+                        "pie pie"                   
+
+            }
+    nav ul li a {
+        font-size: 12px;
+    }            
+} 
+
+/* para celulares*/
+@media (max-width: 600px){
+    .container {
+        display: grid;
+        grid-template: auto auto auto auto auto auto auto /    auto;
+        grid-template-areas: "encabe "
+                            "menu-bar "
+                            "subt "
+                            "izquierda" 
+                            "formu"
+                            "pie "                   
+    
+    }   
+    nav ul {
+        list-style: none;
+        margin-left: 30px;
+    
+    }
+    
+    nav ul li {
+        display: inline-block;
+    }
+    
+    nav ul li a {
+        color: black;
+        display: block;
+        padding: 6px 10px;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 12px;
+    
+    }
+    
+    nav ul li a:hover {
+        background-color: #ff5959;
+        color: white;
+    }
+    }
+
+}
+
+.contactos {
+    
+    display: list-item;
+    justify-content: space-between;
+    grid-area: izquierda;
+   
+}
+.formu {
+   display: flex;
+    grid-area: formu;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* texto nuestras tiendas animado*/
+.animado:hover {
+    animation: 4s infinite titu1;
+}
+@keyframes titu1 {
+    0% {transform: rotateZ(0deg);}
+    100% {transform: rotateZ(180deg) scale(0.1);}
+
+}
+/*--------------------------------------------------------
+    Estilos para pie de pagina
+ 
+   -----------------------------------------------------------*/
+
+.pie-pagina {
+    grid-area: pie;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(247, 245, 245);
+    color: black;
+    padding: 40px 20px;
+    height: 10%;
+
+
+}
+
+
+
+/*--------------------------------------------------------
+    Estilos H2 H3
+    -----------------------------------------------------------*/
+
+H2 {
+    text-align: center;
+
+}
+
+H3 {
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------
+    Estilos para encabezado
+    -----------------------------------------------------------*/
+
+
+
+
+/*--------------------------------------------------------
+    Estilos para barra de Menu
+    -----------------------------------------------------------*/
+.menu {
+    grid-area: menu-bar;
+  
+}
+
+nav ul {
+    list-style: none;
+    margin-left: 30px;
+
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: black;
+    display: flex;
+    padding: 15px ;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+}
+
+nav ul li a:hover {
+    background-color: #ff5959;
+    color: white;
+}
+
+/*--------------------------------------------------------
+   header
+    -----------------------------------------------------------*/
+.header {
+    display: flex;
+    background-color: aquamarine;
+    grid-area: encabe;
+
+}
+.header img{
+    margin: 5px 5px ;
+    width: 80px;
+}
+
+.header-texto {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*--------------------------------------------------------
+     Estilos para mostrar subtitulos
+        -----------------------------------------------------------*/
+.contenedorsubtit {
+    grid-area: subt;
+    width: 100%;
+    margin-bottom: 1%;
+    background-color: whitesmoke;
+    padding: 6px 6px;
+    letter-spacing: 3px;
+
+
+}
+
+
+
+
+
+
+
